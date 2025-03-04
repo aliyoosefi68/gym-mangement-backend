@@ -1,0 +1,15 @@
+export enum EntityNames {
+  User = "user",
+  Profile = "profile",
+  Category = "category",
+  Blog = "blog",
+  BlogCategory = "blog_category",
+  BlogLikes = "blog_like",
+  BlogComments = "blog_comments",
+  Membership = "membership",
+  MembershipPlan = "membership_plan",
+  Basket = "basket",
+  Payment = "payment",
+  Order = "order",
+  OrderItems = "order-item",
+}
