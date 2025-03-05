@@ -31,9 +31,7 @@ export class MembershipEntity {
 
   @Column()
   planId: number;
-  @ManyToOne(() => MembershipPlanEntity, (plan) => plan.memberships, {
-    eager: true,
-  })
+  @ManyToOne(() => MembershipPlanEntity, (plan) => plan.memberships)
   plan: MembershipPlanEntity;
 
   @CreateDateColumn()

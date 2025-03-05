@@ -12,4 +12,5 @@ export enum EntityNames {
   Payment = "payment",
   Order = "order",
   OrderItems = "order-item",
+  UserWeight = "user_wight",
 }

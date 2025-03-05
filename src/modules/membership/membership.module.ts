@@ -7,13 +7,18 @@ import { MembershipPlanService } from "./services/membership-plan.service";
 import { MembershipPlanController } from "./controllers/membership-plan.controller";
 import { MembershipController } from "./controllers/membership.controller";
 import { MembershipService } from "./services/membership.service";
+import { SubscriptionReminderService } from "./services/cornjob.service";
 
 @Module({
   imports: [
     AuthModule,
     TypeOrmModule.forFeature([MembershipEntity, MembershipPlanEntity]),
   ],
-  providers: [MembershipPlanService, MembershipService],
+  providers: [
+    MembershipPlanService,
+    MembershipService,
+    SubscriptionReminderService,
+  ],
   controllers: [MembershipPlanController, MembershipController],
   exports: [TypeOrmModule, MembershipPlanService],
 })

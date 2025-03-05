@@ -44,6 +44,8 @@ export enum PublicMessage {
   UnBlock = "کاربر شما رفع بلاک شد",
   CreatePlan = "پلن شما با موفقیت ساخته شد",
   AddToBasket = "پلن با موفقیت به سبد خریدتان اضافه شد",
+  CreateMemberShip = "عضویت با موفقیت انجام شد",
+  AddWeight = "وزن شما با موفقیت ثبت شد",
 }
 export enum NotFoundMessage {
   Notfound = "مورد یافت نشد",
