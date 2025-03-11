@@ -16,6 +16,7 @@ import { MembershipPlanService } from "../membership/services/membership-plan.se
 import { PaymentController } from "./payment.controller";
 import { AuthModule } from "../auth/auth.module";
 import { BasketModule } from "../basket/basket.module";
+import { UserService } from "../user/user.service";
 
 @Module({
   imports: [
@@ -32,6 +33,6 @@ import { BasketModule } from "../basket/basket.module";
   ],
   controllers: [PaymentController],
   providers: [PaymentService, MembershipPlanService],
-  exports: [],
+  exports: [PaymentService, TypeOrmModule],
 })
 export class PaymentModule {}

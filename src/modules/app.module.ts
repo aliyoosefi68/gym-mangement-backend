@@ -8,6 +8,8 @@ import { PaymentModule } from "./payment/payment.module";
 import { OrderModule } from "./order/order.module";
 import { UserModule } from "./user/user.module";
 import { ScheduleModule } from "@nestjs/schedule"; // ایمپورت ماژول زمانبندی
+import { FoodModule } from "./food/food.module";
+import { FoodPlanModule } from "./food-plan/food-plan.module";
 
 @Module({
   imports: [
@@ -15,10 +17,12 @@ import { ScheduleModule } from "@nestjs/schedule"; // ایمپورت ماژول 
     TypeOrmModule.forRoot(TypeOrmConfig()),
     AuthModule,
     UserModule,
+    FoodPlanModule,
     MembershipModule,
+    FoodModule,
     BasketModule,
-    PaymentModule,
     OrderModule,
+    PaymentModule,
   ],
   controllers: [],
   providers: [],

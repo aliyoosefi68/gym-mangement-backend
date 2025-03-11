@@ -4,6 +4,8 @@ export enum EntityNames {
   Category = "category",
   Blog = "blog",
   BlogCategory = "blog_category",
+  FoodCategory = "food_category",
+  Food = "food",
   BlogLikes = "blog_like",
   BlogComments = "blog_comments",
   Membership = "membership",
@@ -13,4 +15,8 @@ export enum EntityNames {
   Order = "order",
   OrderItems = "order-item",
   UserWeight = "user_wight",
+  FoodPlan = "food_plan",
+  SubPlan = "sub_plan",
+  Meal = "meal",
+  MealItem = "meal_item",
 }

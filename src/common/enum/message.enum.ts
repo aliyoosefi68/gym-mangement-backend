@@ -10,12 +10,17 @@ export enum BadRequestMessage {
   ALreadyExistPlanInBasket = "این پلن قبلا در سبد خریدتان وجود دارد",
   DurationTime = "مدت زمان انتخابی را بررسی کنید",
   BasketEmpty = "سبد خرید شما خالی است",
+  FoodPlanEnterTime = "برای ساخت برنامه یا تاریخ شروع و پایان رژیم و یا مدت زمان را وارد کنید",
+  ExpiredPlan = "تاریخ استفاده از پلن تمام شده.",
 }
 export enum ConflictMessage {
   CategoryTitle = "عنوان دسته بندی از قبل وجود دارد !",
   Email = "ایمیل شما درست نمی باشد!",
   Phone = "شماره موبایل شما درست نمی باشد!",
   Usename = "این نام کاربری از قبل وجود دارد",
+  Food = "این غذا از قبل وجود دارد",
+  SubPlan = "این زیر منو از قبل وجود دارد.نام دیگری انتخاب کنید",
+  Meal = "این وعده غذایی از قبل موجود است",
 }
 export enum AuthMessage {
   NotFoundAccount = "کاربری یافت نشد!",
@@ -46,6 +51,12 @@ export enum PublicMessage {
   AddToBasket = "پلن با موفقیت به سبد خریدتان اضافه شد",
   CreateMemberShip = "عضویت با موفقیت انجام شد",
   AddWeight = "وزن شما با موفقیت ثبت شد",
+  CreateFood = "مشخصات غذای شما با موفقیت ثبت شد",
+  CreatedFoodPlan = "برنامه برای کاربر تولید شد.",
+  SetStartDate = "رژیمت رو از امروز شروع کردی",
+  CreatedSubPlan = "زیر منو شما با موفقیت ایجاد شد",
+  CreateMeal = "وعده غذایی ایجاد شد",
+  AddItemToMeal = "آیتم جدید به وعده غذایی شما اضافه شد",
 }
 export enum NotFoundMessage {
   Notfound = "مورد یافت نشد",
@@ -54,6 +65,8 @@ export enum NotFoundMessage {
   NotfoundPost = "پست موردنظر یافت نشد",
   NotfoundPlan = "پلن مورد نظر یافت نشد",
   NotFoundPayment = "پرداخت با این مشخصات یافت نشد",
+  NotFoundSubPlan = "زیر منو مورد نظر یافت نشد",
+  NotfoundMeal = "وعده غذایی یافت نشد",
 }
 export enum ValidationMessage {
   ImageFormatInvalid = "فرمت تصویر شما صحیح نمیباشد!",

@@ -1,8 +1,17 @@
 import { Roles } from "src/common/enum/role.enum";
 import { MembershipEntity } from "src/modules/membership/entity/membership.entity";
 import { OrderEntity } from "src/modules/order/entity/order.entity";
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToMany,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from "typeorm";
 import { UserWeightEntity } from "./user-weight.entity";
+import { ProfileEntity } from "./profile.entity";
+import { FoodPlanEntity } from "src/modules/food-plan/entities/food-plan.entity";
 
 @Entity("user")
 export class UserEntity {
@@ -25,4 +34,13 @@ export class UserEntity {
 
   @OneToMany(() => UserWeightEntity, (weight) => weight.user)
   weights: UserWeightEntity[];
+
+  @OneToMany(() => FoodPlanEntity, (mealPlan) => mealPlan.user)
+  foodPlans: FoodPlanEntity[];
+
+  @Column({ nullable: true })
+  profileId: number;
+  @OneToOne(() => ProfileEntity, (profile) => profile.user, { nullable: true })
+  @JoinColumn()
+  profile: ProfileEntity;
 }
